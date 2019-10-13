@@ -49,3 +49,9 @@ When the token is stored in a cookie, the browser will automatically send it alo
 Bearer authentication is one of the authentication schemes defined in HTTP. It basically means that YOU stick the (JWT) token in the Authorization HTTP header of a request. The browser will NOT do this for you automatically, so it's not suitable for protecting your website. As the browser does not automatically add the header to your request, it is not vulnerable to a CSRF attack, which depends on your authentication info being submitted automatically to the original domain.
 
 The bearer scheme is often used to protect web APIs (REST services) that are consumed via AJAX calls or from mobile clients.
+
+
+In simple words:
+
+innerText will show the value as is and ignores any HTML formatting which may be included.
+innerHTML will show the value and apply any HTML formatting.
