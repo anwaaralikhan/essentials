@@ -28,7 +28,7 @@ Local Storage
 Session Storage
 1- Client side reading only
 2- 5MB storage
-3- Less support on older browser
+3- Less support on older browser.
 4- The sessionStorage will be deleted when the tab is closed (information available only inside the window/tab in which it was set)
 
 
