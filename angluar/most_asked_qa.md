@@ -7,6 +7,8 @@ The Angular application is made using the following:
  - Directives
  - Data Binding
  - Services (This component is used to develop the components, which can be used to share in the entire application.)
+ Services help us in not repeating the code. With the creation of services, we can use the same code from different components. Here is the command to create a service in angular, ng g service User (a UserService is created when this command is used). 
+ 
  - Dependency Injection
  - Routing
 
@@ -15,10 +17,16 @@ The component lifecycle hooks overview the life cycle sequence and the interface
 
 There are a number of lifecycle hooks which are listed below:–
  - ngOnChanges
- - ngOnInit
+ - ngOnInit (It initializes the component content)
  - ngDoCheck
  - ngAfterContentInit
- - ngAfterContentChecked
- - ngAfterViewInit
- - ngAfterViewChecked
+ - ngAfterContentChecked (It checks the binding of the external content.)
+ - ngAfterViewInit (It creates the component view.)
+ - ngAfterViewChecked (It checks the bindings of the component’s view)
  - ngOnDestroy
+ 
+Differentiate between Components and Directives in Angular 5.
+Components break up the application into smaller parts; whereas, Directives add behavior to an existing DOM element. 
+
+What is the use of @Input and @Output? 
+When it comes to the communication of Angular Components, which are in Parent-Child Relationship; we use @Input in Child Component when we are passing data from Parent to Child Component and @Output is used in Child Component to receive an event from Child to Parent Component. 
