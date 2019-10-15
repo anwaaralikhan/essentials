@@ -45,3 +45,6 @@ In ng-Class, loading of CSS class is possible; whereas, in ng-Style we can set t
 
 What are ngModel and how do we represent it? 
 ngModel is a directive which can be applied on a text field. This a two-way data binding. ngModel is represented by [()] 
+
+What is an AsyncPipe in Angular? 
+When an observable or promise returns something, we use a temporary property to hold the content. Later, we bind the same content to the template. With the usage of AsyncPipe, the promise or observable can be directly used in a template and a temporary property is not required. 
