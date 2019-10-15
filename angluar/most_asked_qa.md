@@ -30,3 +30,18 @@ Components break up the application into smaller parts; whereas, Directives add 
 
 What is the use of @Input and @Output? 
 When it comes to the communication of Angular Components, which are in Parent-Child Relationship; we use @Input in Child Component when we are passing data from Parent to Child Component and @Output is used in Child Component to receive an event from Child to Parent Component. 
+
+
+In how many ways the Data Binding can be done?
+Data Binding happens between the HTML (template) and typescript (component). Data binding can be done in 3 ways:
+
+(i) Property Binding (ii) Event Binding (iii) Two-Way Data Binding. 
+
+What is the purpose of using package.json in the angular project?
+With the existence of package.json, it will be easy to manage the dependencies of the project. If we are using typescript in the angular project then we can mention the typescript package and version of typescript in package.json.
+
+Differentiate between ng-Class and ng-Style.
+In ng-Class, loading of CSS class is possible; whereas, in ng-Style we can set the CSS style.
+
+What are ngModel and how do we represent it? 
+ngModel is a directive which can be applied on a text field. This a two-way data binding. ngModel is represented by [()] 
