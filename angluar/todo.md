@@ -8,3 +8,6 @@
 - Change Detection
 - Pipes
 - Directives
+- Virtual DOM
+- Tree shaking
+- Environment/Configurations
