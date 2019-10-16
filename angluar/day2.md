@@ -86,3 +86,13 @@ Virtual DOM creates a whole tree from scratch every time you rerender.
 
 Incremental DOM, on the other hand, doesn’t need any memory to rerender the view if it doesn’t change the DOM. We only have to allocate the memory when the DOM nodes are added or removed. And the size of the allocation is proportional to the size of the DOM change.
 
+
+Question: Please explain the differences between Angular and jQuery?
+Answer: The single biggest difference between Angular and jQuery is that while the former is a JS frontend framework, the latter is a JS library. Despite this, there are some similarities between the two, such as both features DOM manipulation and provides support for animation.
+
+Nonetheless, notable differences between Angular and jQuery are:
+
+Angular has two-way data binding, jQuery does not
+Angular provides support for RESTful API while jQuery doesn’t
+jQuery doesn’t offer deep linking routing though Angular supports it
+There is no form validation in jQuery whereas it is present in Angular
