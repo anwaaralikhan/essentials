@@ -96,3 +96,11 @@ Angular has two-way data binding, jQuery does not
 Angular provides support for RESTful API while jQuery doesn’t
 jQuery doesn’t offer deep linking routing though Angular supports it
 There is no form validation in jQuery whereas it is present in Angular
+
+
+What is Data Binding? How many ways it can be done?
+Answer: In order to connect application data with the DOM (Data Object Model), data binding is used. It happens between the template (HTML) and component (TypeScript). There are 3 ways to achieve data binding:
+
+Event Binding – Enables the application to respond to user input in the target environment
+Property Binding – Enables interpolation of values computed from application data into the HTML
+Two-way Binding – Changes made in the application state gets automatically reflected in the view and vice-versa. The ngModel directive is used for achieving this type of data binding.
