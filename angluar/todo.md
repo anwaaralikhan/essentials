@@ -5,3 +5,6 @@
 - Token Management
 - Keep me Logged in
 - State Management
+- Change Detection
+- Pipes
+- Directives
