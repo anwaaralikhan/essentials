@@ -53,3 +53,84 @@ References
 
 - https://malcoded.com/posts/angular-data-binding/
 
+
+Binding to events
+Until now we only used data-binding to display the values of variables on the view. But what if we want to react to actions dispatched for the user?
+
+In that case, we want to bind the corresponding event (for example the click-event) to a method in our component.
+
+To do that, we use attributes, with the name of the event we want to bind to, surrounded by round brackets:
+
+<button (click)="onButtonClicked()">Change Name</button>
+In this example, the method we want to execute is called "onButtonClicked".
+
+Notice that we do not only have to provide a reference to that method (like e.g. in react) but also call that method "onButtonClicked()".
+
+Of course, we also have to implement that method in our component:
+
+import { Component } from '@angular/core'
+
+@Component({
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+})
+export class AppComponent {
+  name = 'Angular'
+
+  onButtonClicked() {
+    this.name = 'Charlie'
+  }
+}
+Passing events along
+In the case of mouse-events (and others), it is often required to receive the original event, to get access to information like the click-location.
+
+We can pass the original event to our method by using the special "\$event" syntax:
+
+<button (click)="onButtonClicked($event)">Change Name</button>
+Notice that that parameter has to be exactly spelled like above, including the dollar sign. Afterward, we can receive the event by adding a parameter to our method:
+
+onButtonClicked(evt: MouseEvent) {
+    this.name = 'Charlie'
+}
+
+What is two-way data binding?
+With two-way data binding, the framework (angular) is not only watching your variables for changes. It also keeps track of changes that are made by the user (for example with input-elements) and updates the variables accordingly.
+
+That way, the variables in the code always represent what is displayed in the view.
+
+How to use two-way data binding in angular
+Out of the box, two-way data binding is pretty rare in angular. But there is one commonly used directive that makes two-way data binding possible. This directive is called ngModel.
+
+NgModel is part of the angular "FormsModule" and has to be imported into your module manually.
+
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { FormsModule } from '@angular/forms'
+
+import { AppComponent } from './app.component'
+
+@NgModule({
+  imports: [BrowserModule, FormsModule],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+NgModel can be used with form-elements like inputs to implement two-way data binding. To do that, we have to use a pretty special syntax: [(ngModel)]. Its a combination of the one-way- and the event binding syntax.
+
+It is used like so:
+
+<input [(ngModel)]="name" />
+Using this syntax the value of the variable "name" is not only shown as the value of the input, but both values change when the user types into the input field
+
+
+How two-way data binding works
+It turns out, the combined syntax is no coincidence. It is just a prettier version of a normal data-binding to display the value on the screen and an event binding to update the value of the variable.
+
+The example above can also be written as:
+
+<input [ngModel]="name" (ngModelChange)="name = $event" />
+Notive that this version is longer but also gives you more control over what happens. Instead of only updating the value of the "name"-variable with the latest event, you could do all kinds of stuff when the values changes. Just bind to a custom method...
+
+Conclusion
+In this tutorial we discovered, how we can use the power of data binding in our angular application.
