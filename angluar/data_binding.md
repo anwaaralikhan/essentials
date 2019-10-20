@@ -31,7 +31,7 @@ Because we are using the braces to differentiate the variable's name from normal
 
 ```<p>Hello, my name is {{ name }}!</p>```
 
-### Passing bound values as attributes
+## Passing bound values as attributes
 
 Some HTML-elements and angular components with inputs require that values are passed to them using attributes. These data-bindings are called property bindings. In that case, we can use a similar syntax, as if we would append the value to the elements' children.
 
@@ -124,7 +124,7 @@ It is used like so:
 Using this syntax the value of the variable "name" is not only shown as the value of the input, but both values change when the user types into the input field
 
 
-##How two-way data binding works
+## How two-way data binding works
 It turns out, the combined syntax is no coincidence. It is just a prettier version of a normal data-binding to display the value on the screen and an event binding to update the value of the variable.
 
 The example above can also be written as:
@@ -133,7 +133,7 @@ The example above can also be written as:
 
 Notive that this version is longer but also gives you more control over what happens. Instead of only updating the value of the "name"-variable with the latest event, you could do all kinds of stuff when the values changes. Just bind to a custom method...
 
-###Conclusion
+## Conclusion
 In this tutorial we discovered, how we can use the power of data binding in our angular application.
 
 
