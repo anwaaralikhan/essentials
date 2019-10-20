@@ -55,15 +55,11 @@ To do that, we use attributes, with the name of the event we want to bind to, su
 ```<button (click)="onButtonClicked()">Change Name</button>```
 
 In this example, the method we want to execute is called "onButtonClicked".
-Notice that we do not only have to provide a reference to that method (like e.g. in react) but also call that method 
-
-`onButtonClicked()`.
+Notice that we do not only have to provide a reference to that method (like e.g. in react) but also call that method `onButtonClicked()`.
 
 Of course, we also have to implement that method in our component:
-
 ```
 import { Component } from '@angular/core'
-
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -87,12 +83,13 @@ We can pass the original event to our method by using the special "\$event" synt
 
 Notice that that parameter has to be exactly spelled like above, including the dollar sign. Afterward, we can receive the event by adding a parameter to our method:
 
-```onButtonClicked(evt: MouseEvent) {
+```
+onButtonClicked(evt: MouseEvent) {
     this.name = 'Charlie'
-}```
+}
+```
 
-
-### What is two-way data binding?
+## What is two-way data binding?
 With two-way data binding, the framework (angular) is not only watching your variables for changes. It also keeps track of changes that are made by the user (for example with input-elements) and updates the variables accordingly.
 
 That way, the variables in the code always represent what is displayed in the view.
@@ -137,3 +134,6 @@ Notive that this version is longer but also gives you more control over what hap
 
 ###Conclusion
 In this tutorial we discovered, how we can use the power of data binding in our angular application.
+
+
+ [Databinding Tutorial Referene](https://malcoded.com/posts/angular-data-binding/)
