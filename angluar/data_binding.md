@@ -83,6 +83,7 @@ We can pass the original event to our method by using the special "\$event" synt
 
 Notice that that parameter has to be exactly spelled like above, including the dollar sign. Afterward, we can receive the event by adding a parameter to our method:
 
+
 ```
 onButtonClicked(evt: MouseEvent) {
     this.name = 'Charlie'
