@@ -54,7 +54,7 @@ To do that, we use attributes, with the name of the event we want to bind to, su
 
 ```<button (click)="onButtonClicked()">Change Name</button>```
 
-In this example, the method we want to execute is called "onButtonClicked".
+In this example, the method we want to execute is called `"onButtonClicked"`.
 Notice that we do not only have to provide a reference to that method (like e.g. in react) but also call that method `onButtonClicked()`.
 
 Of course, we also have to implement that method in our component:
@@ -77,12 +77,11 @@ export class AppComponent {
 ## Passing events along
 In the case of mouse-events (and others), it is often required to receive the original event, to get access to information like the click-location.
 
-We can pass the original event to our method by using the special "\$event" syntax:
+We can pass the original event to our method by using the special `"\$event"` syntax:
 
 ```<button (click)="onButtonClicked($event)">Change Name</button>```
 
 Notice that that parameter has to be exactly spelled like above, including the dollar sign. Afterward, we can receive the event by adding a parameter to our method:
-
 
 ```
 onButtonClicked(evt: MouseEvent) {
@@ -98,7 +97,7 @@ That way, the variables in the code always represent what is displayed in the vi
 How to use two-way data binding in angular
 Out of the box, two-way data binding is pretty rare in angular. But there is one commonly used directive that makes two-way data binding possible. This directive is called ngModel.
 
-NgModel is part of the angular "FormsModule" and has to be imported into your module manually.
+NgModel is part of the angular `"FormsModule"` and has to be imported into your module manually.
 
 ```
 import { NgModule } from '@angular/core'
