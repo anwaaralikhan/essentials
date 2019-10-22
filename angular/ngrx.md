@@ -30,7 +30,7 @@ The basic implementation looks like the following:
 
 - Your application’s state is maintained in the store. The store is immutable.
 - Your application’s components can subscribe to the store and get automatic updates of state through selectors.
-Selectors enable components to get a slice (a part) of your application’s state, and also mutate state with selector functions.
-Actions modify the state of the store by using reducers (functions) that enable changes while keeping it immutable.
-Meta-Reducers (not shown) are hooks where you can pre or post-process actions before they get invoked.
+- Selectors enable components to get a slice (a part) of your application’s state, and also mutate state with selector functions.
+- Actions modify the state of the store by using reducers (functions) that enable changes while keeping it immutable.
+- Meta-Reducers (not shown) are hooks where you can pre or post-process actions before they get invoked.
 Effects occur as a result from actions, and can also create actions when called. Effects primary responsibility is to create async side-effects (like service calls to APIs), that ultimately generate other actions.
