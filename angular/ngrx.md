@@ -35,6 +35,8 @@ The basic implementation looks like the following:
 - Meta-Reducers (not shown) are hooks where you can pre or post-process actions before they get invoked.
 - Effects occur as a result from actions, and can also create actions when called. Effects primary responsibility is to create async side-effects (like service calls to APIs), that ultimately generate other actions.
 
+NgRx can also simplify the architecture of your application, as you can use it to replace property and event bindings.
+
 
 Reference 
 `https://indepth.dev/how-to-start-flying-with-angular-and-ngrx/`
