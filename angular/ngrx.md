@@ -28,9 +28,8 @@ The basic implementation looks like the following:
 ![Image description](https://res.cloudinary.com/indepth-dev/image/upload/f_auto,fl_lossy,q_auto/local_media/2019/08/image-276.png)
 
 
-
 - Your application’s state is maintained in the store. The store is immutable.
-Your application’s components can subscribe to the store and get automatic updates of state through selectors.
+- Your application’s components can subscribe to the store and get automatic updates of state through selectors.
 Selectors enable components to get a slice (a part) of your application’s state, and also mutate state with selector functions.
 Actions modify the state of the store by using reducers (functions) that enable changes while keeping it immutable.
 Meta-Reducers (not shown) are hooks where you can pre or post-process actions before they get invoked.
