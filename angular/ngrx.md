@@ -29,7 +29,7 @@ The basic implementation looks like the following:
 
 
 
-Your application’s state is maintained in the store. The store is immutable.
+- Your application’s state is maintained in the store. The store is immutable.
 Your application’s components can subscribe to the store and get automatic updates of state through selectors.
 Selectors enable components to get a slice (a part) of your application’s state, and also mutate state with selector functions.
 Actions modify the state of the store by using reducers (functions) that enable changes while keeping it immutable.
