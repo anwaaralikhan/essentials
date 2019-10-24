@@ -99,4 +99,4 @@ Reference
 
 1- https://angular.io/guide/architecture-services
 2- https://stackoverflow.com/questions/50625913/when-we-should-not-use-angular-service/50631080
-
+3- https://netbasal.com/angular-services-do-not-have-to-be-singletons-ffa879e62082
