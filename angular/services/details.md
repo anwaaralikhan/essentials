@@ -95,8 +95,22 @@ Register it with component providers and make it a non-singleton service.
 
 The benefit is that when Angular destroys the component, Angular will also destroy the service and release the memory that is occupied by it.
 
+
+Service vs Component
+
+Angular components are a subset of directives. Unlike directives, components always have a template and only one component can be instantiated per an element in a template.
+
+We uses @Injectable for services. 
+No decorator exists for Services unlike @Component and @Directive. @Injectable is used only when one service needs to be used by a component, directive or another service.
+
 Reference 
 
 1- https://angular.io/guide/architecture-services
 2- https://stackoverflow.com/questions/50625913/when-we-should-not-use-angular-service/50631080
 3- https://netbasal.com/angular-services-do-not-have-to-be-singletons-ffa879e62082
+4- https://stackoverflow.com/questions/46105686/whats-the-difference-between-service-and-component-in-angular-2/51933140
+
+
+
+
+
