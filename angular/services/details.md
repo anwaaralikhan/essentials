@@ -1,3 +1,6 @@
+
+> The sole purpose of the service is to share data between child’s components and to provide a couple of helper’s methods.
+
 ## Services
 
 1.To Implement any Business Logic that is independent of any Component
@@ -62,7 +65,22 @@ export class AppModule { }
 ```
 
 
+When you register providers in the @Injectable decorator of the service itself, optimization tools such as those used by the CLI's production builds can perform tree shaking, which removes services that aren't used by your app. Tree shaking results in smaller bundle sizes.
+
+Angular module providers (@NgModule.providers) are registered with the application's root injector. Angular can inject the corresponding services in any class it creates. Once created, a service instance lives for the life of the app and Angular injects this one service instance in every class that needs it.
+
+
+
+Well, it's recommended to Always register application-wide services with the root AppModule which makes a service singleton(it will live as long as our application lives) but it entirely depends upon the use case.
+
+If the sole purpose of the service is to share data between child’s components and to provide a couple of helper’s methods.
+
+Register it with component providers and make it a non-singleton service.
+
+The benefit is that when Angular destroys the component, Angular will also destroy the service and release the memory that is occupied by it.
+
 Reference 
 
 1- https://angular.io/guide/architecture-services
 2- https://stackoverflow.com/questions/50625913/when-we-should-not-use-angular-service/50631080
+
