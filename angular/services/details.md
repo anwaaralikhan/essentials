@@ -25,3 +25,31 @@ import { LoggingService } from './shared/services/logging.service';
   providers: [LoggingService]
 })
 ```
+
+
+### Module
+
+```
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import {HttpClientModule} from '@angular/common/http';
+import { LoggingService } from './shared/services/logging.service';
+
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    DataTablesModule,
+    HttpClientModule,
+    NgAlertModule
+  ],
+  providers: [LoggingService],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+```
