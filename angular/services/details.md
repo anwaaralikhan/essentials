@@ -12,11 +12,16 @@ There are three level @ where we can provide services.
 
 
 ### Component 
-```import { LoggingService } from './shared/services/logging.service';
+
+- This service is only avialable to this Component.
+- 
+```
+import { LoggingService } from './shared/services/logging.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   providers: [LoggingService]
-})```
+})
+```
