@@ -1,7 +1,7 @@
 
 
 
-Components are declared, Modules are imported, and Services are provided. An example I'm working with:
+`Components` are declared, `Modules` are imported, and `Services` are provided. An example I'm working with:
 
 
 
