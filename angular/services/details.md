@@ -97,7 +97,7 @@ The benefit is that when Angular destroys the component, Angular will also destr
 
 
 Service vs Component
-
+They are always associated with an HTML template and some CSS.
 Angular components are a subset of directives. Unlike directives, components always have a template and only one component can be instantiated per an element in a template.
 
 We uses @Injectable for services. 
