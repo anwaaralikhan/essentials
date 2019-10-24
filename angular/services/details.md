@@ -65,6 +65,22 @@ export class AppModule { }
 ```
 
 
+- [-ve] You are not releasing memory
+
+### OnDestroy Hook
+Many developers don’t know this, but non-singletons services also have the ngOnDestroy() lifecycle hook. You can use it for cleaning.
+
+```
+export class AdminService implements OnDestroy {
+  ngOnDestroy() {
+    // Clean subscriptions, intervals, etc
+  }  
+}
+```
+Also if we call `NgModuleRef.destroy()` or `PlatformRef.destroy()` then `ngOnDestroy` method of singleton providers will be also executed. 
+
+
+
 When you register providers in the @Injectable decorator of the service itself, optimization tools such as those used by the CLI's production builds can perform tree shaking, which removes services that aren't used by your app. Tree shaking results in smaller bundle sizes.
 
 Angular module providers (@NgModule.providers) are registered with the application's root injector. Angular can inject the corresponding services in any class it creates. Once created, a service instance lives for the life of the app and Angular injects this one service instance in every class that needs it.
