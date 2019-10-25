@@ -3,7 +3,7 @@
 
 ## Services
 
-1.To Implement any Business Logic that is independent of any Component
+1. To Implement any Business Logic that is independent of any Component
 
 Assume you want to calculate the age from DOB, Now you provide the year and The logic can give you age you would not need an HTML view to do that ,it is component Independent
 
