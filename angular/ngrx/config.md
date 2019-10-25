@@ -1,1 +1,1 @@
-data
+NG RX -d
