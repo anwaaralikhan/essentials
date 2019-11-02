@@ -1,6 +1,8 @@
 
 (Scalable Project Structure)[https://stackoverflow.com/questions/51776177/how-to-define-a-highly-scalable-folder-structure-for-your-angular-6-project?noredirect=1&lq=1]
 
+
+```
 |-- app
 
      |-- [+] configs
@@ -47,3 +49,5 @@
      |-- icons
      |-- css
           |-- styles.scss
+
+```
