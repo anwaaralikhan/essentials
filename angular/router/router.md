@@ -21,10 +21,17 @@
 ### Angular Routing
 
 ```
+const routes: Routes = [
+  {path:'datagrid',component : DatagridComponent},
+  {path:'user',component: UserComponent}
+];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+export class AppRoutingModule { }
+
 ```
 RouterModule.forRoot()
 
