@@ -4,4 +4,7 @@ Nested Child Routes
 Auxiliary Routes
 Nested Auxiliary Routes
 
-Add <base href="/"> in the index.html, it helps the application to construct routing urls
+
+### Setup
+
+Add <base href="/"> in the index.html on the top, it helps the application to construct routing urls while navigating.
