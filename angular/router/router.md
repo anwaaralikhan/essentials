@@ -15,4 +15,5 @@
     --flat puts the file in src/app instead of its own folder.
     --module=app tells the CLI to register it in the imports array of the AppModule.
 ```
+ - use routerLink directive to perform navigation.
 Add Routing
