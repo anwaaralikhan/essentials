@@ -1,4 +1,4 @@
 
--Routing
--Child Routes
--Authenticated Routes
+- Routing
+- Child Routes
+- Authenticated Routes
