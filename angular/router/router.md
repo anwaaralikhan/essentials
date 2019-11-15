@@ -3,6 +3,9 @@
 - Nested Child Routes
 - Auxiliary Routes
 - Nested Auxiliary Routes
+- Router Parameters
+- Wild cards
+- Authentication Authorization
 
 
 ### Setup
