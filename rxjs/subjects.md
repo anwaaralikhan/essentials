@@ -14,18 +14,25 @@ Let's explore.
 
 
 
-Using Subjects
+### Using Subjects
 Creating a subject is as simple as newing a new instance of RxJS’s Subject:
 
+```
 const mySubject = new Rx.Subject();
+```
+
 Multiple subscriptions can be created and internally the subject will keep a list of subscriptions:
 
+```
 const mySub = mySubject.subscribe(x => console.log(`${x} ${x}`));
 const mySub2 = mySubject.subscribe(x => console.log(x.toUpperCase()));
+```
+
 Data can be pushed into the subject using its next method:
 
+```
 mySubject.next('👋 Hello!');
-
+```
 // 👋 Hello! 👋 Hello!
 // 👋 HELLO!
 
